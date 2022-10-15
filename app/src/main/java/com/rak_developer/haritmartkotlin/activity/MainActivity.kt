@@ -1,7 +1,8 @@
-package com.rak_developer.haritmartkotlin
+package com.rak_developer.haritmartkotlin.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.rak_developer.haritmartkotlin.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
