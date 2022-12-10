@@ -10,7 +10,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
-
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
@@ -23,6 +22,30 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activity.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VerifyOTPActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SelectLocationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OnBoardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".activity.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait">
@@ -32,10 +55,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.MainActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

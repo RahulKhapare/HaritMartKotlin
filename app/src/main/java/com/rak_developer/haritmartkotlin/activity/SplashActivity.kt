@@ -1,5 +1,6 @@
 package com.rak_developer.haritmartkotlin.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -25,18 +26,32 @@ class SplashActivity : AppCompatActivity() {
     }
 
     fun init() {
-        loginAPICall()
+        initAPICall()
+
     }
 
-    fun loginAPICall() {
-        val initAPI = RetrofitHelper.getInstance().create(APIService::class.java)
+    fun jumpToOnBoard() {
+        intent =
+            Intent(activity, OnBoardActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun jumpToLocation() {
+        intent =
+            Intent(activity, SelectLocationActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun initAPICall() {
+        val apiCall = RetrofitHelper.getInstance().create(APIService::class.java)
         GlobalScope.launch {
-            val result = initAPI.getInitCall()
+            val result = apiCall.getInitCall()
             if (result != null) {
                 Log.e("TAG", "initAPIResponse: " + result.body().toString())
                 val initModel = result.body()
                 if (initModel != null) {
                     Log.e("TAG", "versionCode: " + initModel.err_code)
+                    jumpToOnBoard()
                 }
             }
         }

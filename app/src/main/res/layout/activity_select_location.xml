@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SetLocationActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--        <fragment-->
+        <!--            android:id="@+id/mapFrame"-->
+        <!--            android:name="com.google.android.gms.maps.SupportMapFragment"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"></fragment>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/product_bg_card"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:id="@+id/lnrAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:text="Set Location"
+                    android:textColor="@color/textColor"
+                    android:textSize="20dp"></TextView>
+
+                <TextView
+                    android:id="@+id/txtEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:paddingRight="20dp"
+                    android:text="Edit"
+                    android:textColor="@color/saffron"
+                    android:textSize="14dp"></TextView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lnrAction"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_location_new_bg"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="Locating..."
+                android:textSize="16sp"></TextView>
+
+            <Button
+                android:id="@+id/btnLocation"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/txtAddress"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/custom_button"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="Set Location"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"></Button>
+
+        </RelativeLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCurrentLocation"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            app:cardCornerRadius="40dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_my_location_24"></ImageView>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</layout>

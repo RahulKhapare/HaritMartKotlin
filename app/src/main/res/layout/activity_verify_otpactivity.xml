@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".OnboardingActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_board_green">
+
+        <LinearLayout
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:background="@color/trans"
+                    android:theme="@style/ToolbarColoredBackArrow"
+                    app:subtitleTextColor="@color/white"
+                    app:titleTextColor="@color/white" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_alignParentBottom="true"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="80dp"
+                    android:paddingRight="30dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_group_4171" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="  Global\nGrocery"
+                    android:textColor="#ffffff"
+                    android:textSize="27dp" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/product_bg_card"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/CreateTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunit_sans_bold"
+                        android:text="Verify Your Number"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_sans_semibold"
+                        android:textColor="@color/grey1"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.rak_developer.haritmartkotlin.util.OtpEditText
+                        android:id="@+id/etxOtp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:cursorVisible="false"
+                        android:digits="1234567890"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:padding="10dp"
+                        android:textColorHint="@color/grey1"
+                        android:textIsSelectable="false" />
+
+                    <Button
+                        android:id="@+id/btnProcess"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/custom_button"
+                        android:fontFamily="@font/nunito_sans_semibold"
+                        android:text="Proceed"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:textSize="19sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txtTimer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="email"
+                        android:fontFamily="@font/nunito_sans_semibold"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:text="Resend OTP"
+                        android:textColor="@color/saffron"
+                        android:textSize="14dp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>
+
