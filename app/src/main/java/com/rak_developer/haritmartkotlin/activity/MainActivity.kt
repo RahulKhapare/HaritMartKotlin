@@ -1,5 +1,7 @@
 package com.rak_developer.haritmartkotlin.activity
 
+import android.app.Dialog
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     val cart: String? = "Cart"
     val favorite: String? = "Favorite"
 
+
     private val TIME_DELAY = 2000
     private var back_pressed: Long = 0
 
@@ -38,6 +41,20 @@ class MainActivity : AppCompatActivity() {
         binding.txtAddress.text = Config.LOCATION
         home?.let { loadFragment(HomeFragment(), it) }
         setupBottomNav()
+        onClick()
+    }
+
+    fun onClick() {
+        binding.imgNotification.setOnClickListener {
+            intent =
+                Intent(activity, NotificationActivity::class.java)
+            startActivity(intent)
+        }
+        binding.imgProfile.setOnClickListener {
+            intent =
+                Intent(activity, MyAccountActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun setupBottomNav() {

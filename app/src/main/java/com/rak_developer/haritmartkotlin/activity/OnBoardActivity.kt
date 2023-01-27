@@ -9,6 +9,8 @@ import com.rak_developer.haritmartkotlin.R
 import com.rak_developer.haritmartkotlin.adapter.OnBoardAdapter
 import com.rak_developer.haritmartkotlin.databinding.ActivityOnBoardBinding
 import com.rak_developer.haritmartkotlin.model.OnBoardModel
+import com.rak_developer.haritmartkotlin.test.TestActivity
+import com.rak_developer.haritmartkotlin.util.Config
 import com.rak_developer.haritmartkotlin.util.WindowBar
 
 class OnBoardActivity : AppCompatActivity() {
@@ -27,11 +29,13 @@ class OnBoardActivity : AppCompatActivity() {
     fun init() {
         setupOnBoardingItems()
         binding.btnLogin.setOnClickListener {
+            Config.CAME_FROM = Config.FROM_LOGIN
             intent =
                 Intent(activity, LoginActivity::class.java)
             startActivity(intent)
         }
-        binding.btnSecondary.setOnClickListener {
+        binding.btnSignIn.setOnClickListener {
+            Config.CAME_FROM = Config.FROM_REGISTER
             intent =
                 Intent(activity, RegisterActivity::class.java)
             startActivity(intent)
@@ -44,10 +48,8 @@ class OnBoardActivity : AppCompatActivity() {
             finish()
         }
         binding.imgFacebook.setOnClickListener {
-
         }
         binding.imgGoogle.setOnClickListener {
-
         }
     }
 
@@ -94,5 +96,11 @@ class OnBoardActivity : AppCompatActivity() {
         } catch (e: Exception) {
 
         }
+    }
+
+    fun jumpTestActivity() {
+        intent =
+            Intent(activity, TestActivity::class.java)
+        startActivity(intent)
     }
 }

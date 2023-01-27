@@ -58,6 +58,8 @@
                         android:layout_marginBottom="20dp"
                         app:tabBackground="@drawable/tab_selector"
                         app:tabGravity="center"
+                        app:tabPaddingStart="10dp"
+                        app:tabPaddingEnd="10dp"
                         app:tabIndicatorHeight="0dp" />
 
 
@@ -104,7 +106,7 @@
                                     android:textStyle="normal" />
 
                                 <TextView
-                                    android:id="@+id/btnSecondary"
+                                    android:id="@+id/btnSignIn"
                                     android:layout_width="match_parent"
                                     android:layout_height="?actionBarSize"
                                     android:layout_marginLeft="10dp"
@@ -115,7 +117,7 @@
                                     android:clickable="true"
                                     android:fontFamily="@font/nunito_sans_semibold"
                                     android:gravity="center"
-                                    android:text="Secondary Button"
+                                    android:text="Sign In"
                                     android:textAllCaps="false"
                                     android:textColor="@color/colorPrimaryDark"
                                     android:textSize="16sp" />

@@ -97,16 +97,15 @@ class RegisterActivity : AppCompatActivity() {
         ) {
             Toast.showMessage(activity, "Confirm password not matched")
         } else {
-            jumpOptVerification();
+            jumpToVerification();
         }
     }
 
-    fun jumpOptVerification() {
-        intent =
-            Intent(activity, VerifyOTPActivity::class.java)
-        intent.putExtra(Config.LOGIN_NUMBER, binding.etxNumber.text.toString())
-        intent.putExtra(Config.LOGIN_OTP, Config.DUMMY_OPT)
+    fun jumpToVerification() {
+        Config.SIGN_UP_NUMBER = binding.etxNumber.text.toString().trim()
+        val intent = Intent(activity, LoginActivity::class.java)
         startActivity(intent)
+        finish()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

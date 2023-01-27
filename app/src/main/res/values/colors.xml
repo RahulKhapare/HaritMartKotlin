@@ -34,4 +34,7 @@
     <color name="textColor3">#727C8E</color>
     <color name="textColor4">#4C5264</color>
 
+    <color name="orange">#ffa500</color>
+    <color name="orange_dark">#ce8600</color>
+
 </resources>
