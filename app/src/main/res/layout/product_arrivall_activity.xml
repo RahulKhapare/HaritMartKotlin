@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/lnrProduct"
+            android:layout_width="136dp"
+            android:layout_height="129dp"
+            android:background="@drawable/product_bg">
+
+            <ImageView
+                android:id="@+id/imgVeg"
+                android:layout_width="116dp"
+                android:layout_height="109dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_launcher" />
+
+
+            <RelativeLayout
+                android:id="@+id/lnrAdd"
+                android:layout_width="31dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:visibility="visible">
+
+                <View
+                    android:layout_width="31dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/curve_addition" />
+
+                <ImageView
+                    android:id="@+id/imgAction"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_baseline_add_24" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardView"
+            android:layout_gravity="start"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nunito_sans_regular"
+            android:maxLines="2"
+            android:paddingLeft="5dp"
+            android:text="Tomato"
+            android:textColor="#373737"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+</layout>

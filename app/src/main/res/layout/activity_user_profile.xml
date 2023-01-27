@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".UpdateProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/green">
+
+        <FrameLayout
+            android:id="@+id/frameView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/green"
+                android:theme="@style/ToolbarColoredBackArrow"
+                app:subtitleTextColor="@color/white"
+                app:titleTextColor="@color/white">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/frameView"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/product_bg_card">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/nunito_sans_semibold"
+                        android:text="Personal Details"
+                        android:textColor="@color/textDark"
+                        android:textSize="18sp">
+
+                    </TextView>
+
+                    <RelativeLayout
+                        android:id="@+id/lnrImage"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="50dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgUser"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center_vertical"
+                            android:cropToPadding="true"
+                            android:src="@drawable/ic_baseline_account_circle_24"
+                            android:tint="@color/grey1"
+                            app:civ_border_color="@color/black"
+                            app:civ_border_width="1dp"
+                            app:civ_circle_background_color="@color/white">
+
+                        </de.hdodenhof.circleimageview.CircleImageView>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_margin="0dp"
+                            android:src="@drawable/ic_baseline_camera_alt_24"
+                            app:tint="@color/grey1"></ImageView>
+
+                    </RelativeLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_marginTop="30dp"
+                        android:hint="Name"
+                        android:textColorHint="@color/grey1"
+                        app:backgroundTint="@color/grey1"
+                        app:hintTextColor="@color/grey1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etxName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_sans_regular"
+                            android:inputType="textCapWords"
+                            android:singleLine="true"
+                            android:textColor="@color/textColor"
+                            android:textSize="18dp"
+                            android:theme="@style/EditTextTheme"
+                            app:backgroundTint="@color/grey1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_marginTop="20dp"
+                        android:hint="Contact Number"
+                        android:textColorHint="@color/grey1"
+                        app:backgroundTint="@color/grey1"
+                        app:hintTextColor="@color/grey1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etxNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_sans_regular"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:singleLine="true"
+                            android:textColor="@color/textColor"
+                            android:textSize="18dp"
+                            android:theme="@style/EditTextTheme"
+                            app:backgroundTint="@color/grey1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_marginTop="20dp"
+                        android:hint="Email Address"
+                        android:textColorHint="@color/grey1"
+                        app:backgroundTint="@color/grey1"
+                        app:hintTextColor="@color/grey1">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etxEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_sans_regular"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            android:textColor="@color/textColor"
+                            android:textSize="18dp"
+                            android:theme="@style/EditTextTheme"
+                            app:backgroundTint="@color/grey1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <CheckBox
+                        android:id="@+id/checkEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:buttonTint="@color/green"
+                        android:fontFamily="@font/nunito_sans_regular"
+                        android:text="Send me emails on promotions, offers and Services "
+                        android:textColor="#373737"
+                        android:visibility="gone" />
+
+
+                    <CheckBox
+                        android:id="@+id/checkBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginTop="20dp"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:checked="true"
+                        android:fontFamily="@font/nunito_sans_regular"
+                        android:gravity="top"
+                        android:paddingLeft="5dp"
+                        android:text="Send me emails on promotions, offers and services"
+                        android:textColor="@color/textColor"
+                        android:textSize="16sp"></CheckBox>
+
+                    <Button
+                        android:id="@+id/btnProcess"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:layout_margin="50dp"
+                        android:background="@drawable/custom_button"
+                        android:fontFamily="@font/nunito_sans_semibold"
+                        android:text="Update Profile"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="19sp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

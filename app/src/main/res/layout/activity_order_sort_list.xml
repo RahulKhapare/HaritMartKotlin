@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/nunito_sans_semibold"
+            android:padding="15dp"
+            android:text="Sort By"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize"
+            android:textStyle="bold"
+            android:visibility="gone">
+
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/lnr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitle"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RadioButton
+                android:id="@+id/radioSort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimaryDark"
+                android:paddingLeft="@dimen/padding10"
+                android:text=""
+                android:textColor="@color/textColor"></RadioButton>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnrLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/lnr"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/black"
+            android:orientation="vertical"></LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

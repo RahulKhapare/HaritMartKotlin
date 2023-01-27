@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".OrderDetailListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/green">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/green"
+            android:theme="@style/ToolbarColoredBackArrow"
+            app:subtitleTextColor="@color/white"
+            app:titleTextColor="@color/white"></androidx.appcompat.widget.Toolbar>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="-40dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/product_bg_card"
+                android:orientation="vertical">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerOrderDetailList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/lnrError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_my_order"
+                app:tint="@color/colorPrimaryDark"></ImageView>
+
+            <TextView
+                android:id="@+id/txtErrorMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text="No Order Data Found"
+                android:textColor="@color/textColor"
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
